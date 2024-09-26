@@ -11,8 +11,12 @@ function makeGrid(gridSize) {
             const newCell = document.createElement("div");
             newCell.classList.add("cell");
             newRow.appendChild(newCell);
+            newCell.addEventListener("mouseover", () => {
+                newCell.classList.add("hoverCell");
+            })
             }
         }
 }
 
 makeGrid(16);
+
