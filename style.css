@@ -1,13 +1,27 @@
 #container {
     display:flex;
+    width: 960px;
+    height: 960px;
+    margin-top: 20px;
+    flex-direction: column;
+    margin: 10px auto auto auto;
+}
+
+.row {
+    display: flex;
+    flex: 1;
 }
 
 .cell {
     border: 2px solid black;
-    width: 35px;
-    height: 35px;
+    flex: 1;
 }
 
 .hoverCell {
     background-color: aqua;
+}
+
+button {
+    margin: auto;
+    display: block;
 }

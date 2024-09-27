@@ -1,6 +1,10 @@
 const container = document.querySelector("#container");
+const promptButton = document.querySelector("button");
+let gridSize = "";
 
 function makeGrid(gridSize) {
+
+    container.innerHTML = "";
 
     for (let i = 0; i < gridSize; i++){
         const newRow = document.createElement("div");
@@ -18,5 +22,11 @@ function makeGrid(gridSize) {
         }
 }
 
-makeGrid(16);
-
+promptButton.addEventListener("click", () => {
+    gridSize = prompt("Please input grid size:");
+    if (gridSize < 100){
+        makeGrid(gridSize);
+    } else {
+        alert("Please enter a number below 100");
+    }
+})
