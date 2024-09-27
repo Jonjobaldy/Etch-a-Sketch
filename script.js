@@ -15,8 +15,14 @@ function makeGrid(gridSize) {
             const newCell = document.createElement("div");
             newCell.classList.add("cell");
             newRow.appendChild(newCell);
+            let darkness = 0;
+
             newCell.addEventListener("mouseover", () => {
-                newCell.classList.add("hoverCell");
+                newCell.style.backgroundColor = randomBackgroundColor();
+                if (darkness < 10){
+                    darkness++;
+                    newCell.style.opacity = darkness * 0.1;
+                }
             })
             }
         }
@@ -30,3 +36,10 @@ promptButton.addEventListener("click", () => {
         alert("Please enter a number below 100");
     }
 })
+
+function randomBackgroundColor() {
+    const r = Math.floor(Math.random() * 256);
+    const g = Math.floor(Math.random() * 256);
+    const b = Math.floor(Math.random() * 256);
+    return `rgb(${r}, ${g}, ${b})`;
+}

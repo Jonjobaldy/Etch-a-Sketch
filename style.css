@@ -17,9 +17,9 @@
     flex: 1;
 }
 
-.hoverCell {
-    background-color: aqua;
-}
+/*.hoverCell {
+    background-color: rgb(12,34,56); 
+}*/
 
 button {
     margin: auto;
